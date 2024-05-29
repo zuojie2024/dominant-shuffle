@@ -4,8 +4,8 @@ if [ ! -d "./logs" ]; then
     mkdir ./logs
 fi
 
-if [ ! -d "./logs/FrAug" ]; then
-    mkdir ./logs/FrAug
+if [ ! -d "./logs/Aug" ]; then
+    mkdir ./logs/Aug
 fi
 # aug: dom_shuffle
 # rate: k
@@ -36,7 +36,7 @@ python -u run_longExp.py \
   --c_out 7 \
   --des 'Exp' \
   --top_k 5 \
-  --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm1_'96'_'$aug'_d5_'$rate.log
+  --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm1_'96'_'$aug'_d5_'$rate.log
   
 python -u run_longExp.py \
   --task_name long_term_forecast \
@@ -59,7 +59,7 @@ python -u run_longExp.py \
   --c_out 7 \
   --des 'Exp' \
   --top_k 5 \
-  --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm1_'192'_'$aug'_d5_'$rate.log
+  --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm1_'192'_'$aug'_d5_'$rate.log
 
 python -u run_longExp.py \
   --task_name long_term_forecast \
@@ -82,7 +82,7 @@ python -u run_longExp.py \
   --c_out 7 \
   --des 'Exp' \
   --top_k 5 \
-  --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm1_'336'_'$aug'_d5_'$rate.log
+  --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm1_'336'_'$aug'_d5_'$rate.log
 
 python -u run_longExp.py \
   --task_name long_term_forecast \
@@ -105,7 +105,7 @@ python -u run_longExp.py \
   --c_out 7 \
   --des 'Exp' \
   --top_k 5 \
-  --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm1_'720'_'$aug'_d5_'$rate.log
+  --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm1_'720'_'$aug'_d5_'$rate.log
 
 done
 
@@ -135,7 +135,7 @@ python -u run_longExp.py \
   --c_out 7 \
   --des 'Exp' \
   --top_k 5 \
-  --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm2_'96'_'$aug'_d5_'$rate.log
+  --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm2_'96'_'$aug'_d5_'$rate.log
   
 python -u run_longExp.py \
   --task_name long_term_forecast \
@@ -158,7 +158,7 @@ python -u run_longExp.py \
   --c_out 7 \
   --des 'Exp' \
   --top_k 5 \
-  --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm2_'192'_'$aug'_d5_'$rate.log
+  --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm2_'192'_'$aug'_d5_'$rate.log
 
 python -u run_longExp.py \
   --task_name long_term_forecast \
@@ -181,7 +181,7 @@ python -u run_longExp.py \
   --c_out 7 \
   --des 'Exp' \
   --top_k 5 \
-  --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm2_'336'_'$aug'_d5_'$rate.log
+  --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm2_'336'_'$aug'_d5_'$rate.log
 
 python -u run_longExp.py \
   --task_name long_term_forecast \
@@ -204,6 +204,6 @@ python -u run_longExp.py \
   --c_out 7 \
   --des 'Exp' \
   --top_k 5 \
-  --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm2_'720'_'$aug'_d5_'$rate.log
+  --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm2_'720'_'$aug'_d5_'$rate.log
 
 done

@@ -3,8 +3,8 @@ if [ ! -d "./logs" ]; then
     mkdir ./logs
 fi
 
-if [ ! -d "./logs/FrAug" ]; then
-    mkdir ./logs/FrAug
+if [ ! -d "./logs/Aug" ]; then
+    mkdir ./logs/Aug
 fi
 # aug: f_mask, f_mix
 # rate: mask/mix rate
@@ -36,7 +36,7 @@ python -u run_longExp.py \
   --d_model 128 \
   --d_ff 128 \
   --batch_size 16 \
-  --train_epochs 6 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_exchange_rate_'96'_'$aug'_d5_'$rate.log
+  --train_epochs 6 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_exchange_rate_'96'_'$aug'_d5_'$rate.log
 
   python -u run_longExp.py \
   --is_training 1 \
@@ -58,7 +58,7 @@ python -u run_longExp.py \
   --d_model 128 \
   --d_ff 128 \
   --batch_size 16 \
-  --train_epochs 6 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_exchange_rate_'192'_'$aug'_d5_'$rate.log
+  --train_epochs 6 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_exchange_rate_'192'_'$aug'_d5_'$rate.log
 
 done
 
@@ -85,7 +85,7 @@ do
   --d_model 128 \
   --d_ff 128 \
   --batch_size 16 \
-  --train_epochs 6 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_exchange_rate_'336'_'$aug'_d5_'$rate.log
+  --train_epochs 6 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_exchange_rate_'336'_'$aug'_d5_'$rate.log
 
 
 
@@ -111,6 +111,6 @@ python -u run_longExp.py \
   --d_model 128 \
   --d_ff 128 \
   --batch_size 16 \
-  --train_epochs 6 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_exchange_rate_'720'_'$aug'_d5_'$rate.log
+  --train_epochs 6 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_exchange_rate_'720'_'$aug'_d5_'$rate.log
 
 do

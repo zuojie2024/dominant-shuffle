@@ -3,8 +3,8 @@ if [ ! -d "./logs" ]; then
     mkdir ./logs
 fi
 
-if [ ! -d "./logs/FrAug" ]; then
-    mkdir ./logs/FrAug
+if [ ! -d "./logs/Aug" ]; then
+    mkdir ./logs/Aug
 fi
 
 # aug: dom_shuffle
@@ -41,7 +41,7 @@ do
       --dec_in 7 \
       --c_out 7 \
       --des 'Exp' \
-      --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm1_'$pred_len'_'$aug'_d5_'$rate.log
+      --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm1_'$pred_len'_'$aug'_d5_'$rate.log
 
 
 
@@ -79,7 +79,7 @@ do
       --dec_in 7 \
       --c_out 7 \
       --des 'Exp' \
-      --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm2_'$pred_len'_'$aug'_d5_'$rate.log
+      --itr 1 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm2_'$pred_len'_'$aug'_d5_'$rate.log
 
 
 

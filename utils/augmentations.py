@@ -130,23 +130,17 @@ class BatchAugmentation():
 
         magnitude = abs(xy_f)
         
-        topk_indices = torch.argsort(magnitude, dim=1, descending=True)[:, 1:int(rate+1)]
-        
-        #minor_indices = torch.argsort(magnitude, dim=1, descending=True)[:, 10:]
-        
+        topk_indices = torch.argsort(magnitude, dim=1, descending=True)[:, 1:int(rate+1)]        
+        #minor_indices = torch.argsort(magnitude, dim=1, descending=True)[:, 10:]  
+              
         new_xy_f = xy_f
         for i in range(topk_indices.size(2)):
             for j in range(xy.size(0)):
-
                     
-                random_indices = torch.randperm(topk_indices.size(1))
-                
-                shuffled_tensor1 = topk_indices[:,:,i][j][random_indices]
-    
+                random_indices = torch.randperm(topk_indices.size(1))                
+                shuffled_tensor1 = topk_indices[:,:,i][j][random_indices]   
                 new_xy_f[:,:,i][j][topk_indices[:,:,i][j]] = new_xy_f[:,:,i][j][shuffled_tensor1]
-                
-            
-            
+                            
         xy = torch.fft.irfft(new_xy_f,dim=dim)
         
         return xy

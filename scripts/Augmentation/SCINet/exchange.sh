@@ -2,8 +2,8 @@ if [ ! -d "./logs" ]; then
     mkdir ./logs
 fi
 
-if [ ! -d "./logs/FrAug" ]; then
-    mkdir ./logs/FrAug
+if [ ! -d "./logs/Aug" ]; then
+    mkdir ./logs/Aug
 fi
 
 
@@ -36,7 +36,7 @@ python -u run_longExp.py \
   --des 'Exp' \
   --d_model 128 \
   --d_ff 128 \
-  --itr 1 --train_epochs 8 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_exchange_'96'_'$aug'_d5_'$rate.log
+  --itr 1 --train_epochs 8 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_exchange_'96'_'$aug'_d5_'$rate.log
 
 python -u run_longExp.py \
   --is_training 1 \
@@ -60,7 +60,7 @@ python -u run_longExp.py \
   --des 'Exp' \
   --d_model 128 \
   --d_ff 128 \
-  --itr 1 --train_epochs 5 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_exchange_'192'_'$aug'_d5_'$rate.log
+  --itr 1 --train_epochs 5 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_exchange_'192'_'$aug'_d5_'$rate.log
 
 python -u run_longExp.py \
   --is_training 1 \
@@ -85,7 +85,7 @@ python -u run_longExp.py \
   --itr 1 \
   --d_model 128 \
   --d_ff 128 \
-  --train_epochs 3 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_exchange_'336'_'$aug'_d5_'$rate.log
+  --train_epochs 3 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_exchange_'336'_'$aug'_d5_'$rate.log
 
 python -u run_longExp.py \
   --is_training 1 \
@@ -109,6 +109,6 @@ python -u run_longExp.py \
   --des 'Exp' \
   --d_model 128 \
   --d_ff 128 \
-  --itr 1  --train_epochs 3 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_exchange_'720'_'$aug'_d5_'$rate.log
+  --itr 1  --train_epochs 3 --batch_size 16  --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_exchange_'720'_'$aug'_d5_'$rate.log
 
 done

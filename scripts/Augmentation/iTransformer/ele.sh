@@ -4,8 +4,8 @@ if [ ! -d "./logs" ]; then
     mkdir ./logs
 fi
 
-if [ ! -d "./logs/FrAug" ]; then
-    mkdir ./logs/FrAug
+if [ ! -d "./logs/Aug" ]; then
+    mkdir ./logs/Aug
 fi
 
 # aug: dom_shuffle
@@ -42,7 +42,7 @@ python -u run_longExp.py \
   --d_ff 512 \
   --batch_size 8 \
   --learning_rate 0.0005 \
-  --itr 1 --train_epochs 5 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_electricity_'96'_'$aug'_d5_'$rate.log
+  --itr 1 --train_epochs 5 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_electricity_'96'_'$aug'_d5_'$rate.log
 
 python -u run_longExp.py \
   --task_name long_term_forecast \
@@ -68,7 +68,7 @@ python -u run_longExp.py \
   --d_ff 512 \
   --batch_size 8 \
   --learning_rate 0.0005 \
-  --itr 1 --train_epochs 5 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_electricity_'192'_'$aug'_d5_'$rate.log
+  --itr 1 --train_epochs 5 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_electricity_'192'_'$aug'_d5_'$rate.log
 
 python -u run_longExp.py \
   --task_name long_term_forecast \
@@ -94,7 +94,7 @@ python -u run_longExp.py \
   --d_ff 512 \
   --batch_size 8 \
   --learning_rate 0.0005 \
-  --itr 1 --train_epochs 5 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_electricity_'336'_'$aug'_d5_'$rate.log
+  --itr 1 --train_epochs 5 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_electricity_'336'_'$aug'_d5_'$rate.log
 
 python -u run_longExp.py \
   --task_name long_term_forecast \
@@ -120,6 +120,6 @@ python -u run_longExp.py \
   --d_ff 512 \
   --batch_size 8 \
   --learning_rate 0.0005 \
-  --itr 1 --train_epochs 5 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_electricity_'720'_'$aug'_d5_'$rate.log
+  --itr 1 --train_epochs 5 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_electricity_'720'_'$aug'_d5_'$rate.log
 
 done

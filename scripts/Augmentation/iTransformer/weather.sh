@@ -3,8 +3,8 @@ if [ ! -d "./logs" ]; then
     mkdir ./logs
 fi
 
-if [ ! -d "./logs/FrAug" ]; then
-    mkdir ./logs/FrAug
+if [ ! -d "./logs/Aug" ]; then
+    mkdir ./logs/Aug
 fi
 
 # aug: dom_shuffle
@@ -39,7 +39,7 @@ python -u run_longExp.py \
   --d_model 512\
   --d_ff 512\
   --batch_size 16 \
-  --itr 1 --train_epochs 5 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_weather_'96'_'$aug'_d5_'.log
+  --itr 1 --train_epochs 5 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_weather_'96'_'$aug'_d5_'.log
 
 python -u run_longExp.py \
   --task_name long_term_forecast \
@@ -64,7 +64,7 @@ python -u run_longExp.py \
   --d_model 512\
   --d_ff 512\
   --batch_size 16 \
-  --itr 1 --train_epochs 5 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_weather_'192'_'$aug'_d5_'$rate.log
+  --itr 1 --train_epochs 5 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_weather_'192'_'$aug'_d5_'$rate.log
 
 python -u run_longExp.py \
   --task_name long_term_forecast \
@@ -89,7 +89,7 @@ python -u run_longExp.py \
   --d_model 512\
   --d_ff 512\
   --batch_size 16 \
-  --itr 1 --train_epochs 5 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_weather_'336'_'$aug'_d5_'.log
+  --itr 1 --train_epochs 5 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_weather_'336'_'$aug'_d5_'.log
 
 python -u run_longExp.py \
   --task_name long_term_forecast \
@@ -114,7 +114,7 @@ python -u run_longExp.py \
   --d_model 512\
   --d_ff 512\
   --batch_size 16 \
-  --itr 1 --train_epochs 5 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_weather_'720'_'$aug'_d5_'$rate.log
+  --itr 1 --train_epochs 5 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_weather_'720'_'$aug'_d5_'$rate.log
 
 
 

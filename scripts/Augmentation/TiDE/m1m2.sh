@@ -2,8 +2,8 @@ if [ ! -d "./logs" ]; then
     mkdir ./logs
 fi
 
-if [ ! -d "./logs/FrAug" ]; then
-    mkdir ./logs/FrAug
+if [ ! -d "./logs/Aug" ]; then
+    mkdir ./logs/Aug
 fi
 
 # aug: dom_shuffle
@@ -39,7 +39,7 @@ python -u run_longExp.py \
   --batch_size 256 \
   --learning_rate 0.1 \
   --patience 5 \
-  --itr 1 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm2_'96'_'$aug'_d5_'$rate.log
+  --itr 1 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm2_'96'_'$aug'_d5_'$rate.log
 
 python -u run_longExp.py \
   --task_name long_term_forecast \
@@ -65,7 +65,7 @@ python -u run_longExp.py \
   --batch_size 256 \
   --learning_rate 0.1 \
   --patience 5 \
-  --itr 1 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm2_'192'_'$aug'_d5_'$rate.log
+  --itr 1 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm2_'192'_'$aug'_d5_'$rate.log
 
  
 
@@ -94,7 +94,7 @@ python -u run_longExp.py \
   --batch_size 256 \
   --learning_rate 0.1 \
   --patience 5 \
-  --itr 1 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm2_'336'_'$aug'_d5_'$rate.log
+  --itr 1 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm2_'336'_'$aug'_d5_'$rate.log
 
 
 
@@ -123,7 +123,7 @@ python -u run_longExp.py \
   --batch_size 256 \
   --learning_rate 0.1 \
   --patience 5 \
-  --itr 1 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm2_'720'_'$aug'_d5_'$rate.log
+  --itr 1 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm2_'720'_'$aug'_d5_'$rate.log
 
 
 python -u run_longExp.py \
@@ -150,7 +150,7 @@ python -u run_longExp.py \
   --batch_size 256 \
   --learning_rate 0.1 \
   --patience 5 \
-  --itr 1 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm1_'96'_'$aug'_d5_'$rate.log
+  --itr 1 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm1_'96'_'$aug'_d5_'$rate.log
 
 python -u run_longExp.py \
   --task_name long_term_forecast \
@@ -176,7 +176,7 @@ python -u run_longExp.py \
   --batch_size 256 \
   --learning_rate 0.1 \
   --patience 5 \
-  --itr 1 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm1_'192'_'$aug'_d5_'$rate.log
+  --itr 1 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm1_'192'_'$aug'_d5_'$rate.log
 
  
 
@@ -205,7 +205,7 @@ python -u run_longExp.py \
   --batch_size 256 \
   --learning_rate 0.1 \
   --patience 5 \
-  --itr 1 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm1_'336'_'$aug'_d5_'$rate.log
+  --itr 1 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm1_'336'_'$aug'_d5_'$rate.log
 
 
 
@@ -234,6 +234,6 @@ python -u run_longExp.py \
   --batch_size 256 \
   --learning_rate 0.1 \
   --patience 5 \
-  --itr 1 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/FrAug/$model_name'_ETTm1_'720'_'$aug'_d5_'$rate.log
+  --itr 1 --in_batch_augmentation --aug_method  $aug --aug_rate $rate >logs/Aug/$model_name'_ETTm1_'720'_'$aug'_d5_'$rate.log
 
 done
