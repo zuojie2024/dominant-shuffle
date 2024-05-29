@@ -1,4 +1,10 @@
-# dominant shuffle
+# Dominant Shuffle: A Simple Yet Powerful Data Augmentation for Time-series Prediction
+
+Code accompanying the paper "Dominant Shuffle: A Simple Yet Powerful Data Augmentation for Time-series Prediction"
+
+* 📜 [arXiv.2405.16456](https://arxiv.org/abs/2405.16456v1).
+* 🏚️ project homepage <https://kaizhao.net/time-series>.
+
 
 
 ## Getting Started
