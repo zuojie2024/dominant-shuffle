@@ -5,6 +5,25 @@ Code accompanying the paper "Dominant Shuffle: A Simple Yet Powerful Data Augmen
 * 📜 [arXiv.2405.16456](https://arxiv.org/abs/2405.16456v1).
 * 🏚️ project homepage <https://kaizhao.net/time-series>.
 
+## Dominant shuffle
+
+The proposed augmentation is defined in [utils/augmentations.py](https://github.com/zuojie2024/dominant-shuffle/blob/619fa1a01707cd4811dbad206482c8ab7aee00cf/utils/augmentations.py#L127-L146).
+```
+def dom_shuffle(self, x, y, rate=4, dim=1):
+    xy = torch.cat([x,y],dim=1)
+    xy_f = torch.fft.rfft(xy,dim=dim)
+    magnitude = abs(xy_f)
+    topk_indices = torch.argsort(magnitude, dim=1, descending=True)[:, 1:int(rate+1)]        
+    #minor_indices = torch.argsort(magnitude, dim=1, descending=True)[:, 10:]  
+    new_xy_f = xy_f
+    for i in range(topk_indices.size(2)):
+        for j in range(xy.size(0)):  
+            random_indices = torch.randperm(topk_indices.size(1))                
+            shuffled_tensor1 = topk_indices[:,:,i][j][random_indices]   
+            new_xy_f[:,:,i][j][topk_indices[:,:,i][j]] = new_xy_f[:,:,i][j][shuffled_tensor1]
+    xy = torch.fft.irfft(new_xy_f,dim=dim)
+    return xy
+```
 
 
 ## Getting Started
