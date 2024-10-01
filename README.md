@@ -2,9 +2,6 @@
 
 Code accompanying the paper "Dominant Shuffle: A Simple Yet Powerful Data Augmentation for Time-series Prediction"
 
-* 📜 [arXiv.2405.16456](https://arxiv.org/abs/2405.16456v1).
-* 🏚️ project homepage <https://kaizhao.net/time-series>.
-
 ## Dominant shuffle
 
 The proposed augmentation is defined in [utils/augmentations.py](https://github.com/zuojie2024/dominant-shuffle/blob/619fa1a01707cd4811dbad206482c8ab7aee00cf/utils/augmentations.py#L127-L146).
