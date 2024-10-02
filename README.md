@@ -1,6 +1,3 @@
-# Dominant Shuffle: A Simple Yet Powerful Data Augmentation for Time-series Prediction
-
-Code accompanying the paper "Dominant Shuffle: A Simple Yet Powerful Data Augmentation for Time-series Prediction"
 
 ## Dominant shuffle
 
